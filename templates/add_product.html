@@ -1,0 +1,20 @@
+{% include "header.html"%}
+
+{% include "navbar.html"%}
+<body>
+    <div class="container">
+    <h1 class="form-heading">Adding a New Product</h1>
+    <form method="POST" action="{{ url_for('add_product') }}" enctype = "multipart/form-data" class="add-product-form">
+        {{ form.name.label }}   {{ form.name(size=30) }} <br>
+        {{ form.category.label }}   {{ form.category }} <br>
+        {{ form.price.label }}  {{ form.price }} <br>
+        {{ form.weight.label }} {{ form.weight }} <br>
+        {{ form.image.label }}  {{ form.image }} <br>
+        {{ form.description.label }}    {{ form.description(size=400, class_="description") }} <br>
+        {{ form.keywords.label }}   {{ form.keywords }} <br>
+        <input type="submit" value="Done" class="submit-button">
+    </form>
+    </div>
+</body>
+
+{% include "footer.html"%}

@@ -1,0 +1,18 @@
+{% include "header.html"%}
+
+{% include "navbar.html"%}
+<body>
+    <div class="login-form">
+    <h1 class="form-heading">Login to continue</h1>
+    <form method="POST" action="{{ url_for('login') }}" enctype = "multipart/form-data" class="">
+        {{ form.username.label }}   {{ form.username(size=40) }} <br>
+        {{ form.password.label }}   {{ form.password(size=40) }} <br>
+
+
+        <input type="submit" value="Let me in" class="submit-button login">
+    </form>
+        <a class="back" href="{{ url_for('store_page') }}">Go back to shopping</a>
+    </div>
+</body>
+
+{% include "footer.html"%}

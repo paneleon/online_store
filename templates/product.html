@@ -1,0 +1,26 @@
+{% include 'header.html' %}
+<body>
+
+    {% include 'navbar.html' %}
+    <h2 class="product-name"> {{ product.name }} </h2>
+    <div class="container product">
+
+        <img class="product-image" src="{{ product.image }}">
+
+
+        <div class="product-info">
+            <h3>{{ product.price }} $ </h3>
+            <h4>{{ product.weight }} g </h4>
+            <p>{{ product.description }}</p>
+
+            <a class="cart" href="{{ url_for('show_product', product=product, add=True) }}"> Add to Cart</a><br><br>
+            <a class="back" href="{{ url_for('category_products', category=product.category) }}">Go Back</a>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+{% include 'footer.html' %}

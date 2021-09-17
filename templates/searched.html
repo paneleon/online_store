@@ -1,0 +1,23 @@
+{% include 'header.html' %}
+<body>
+
+    {% include 'navbar.html' %}
+
+    <h1 class="search-title"> Search Results </h1>
+    <div class="products">
+        {% for product in products: %}
+            <div class="grid-item">
+                <h3> {{ product.name }} </h3>
+                <a href="{{ url_for('show_product', product=product) }}">
+                    <img class="product-image" src="{{ product.image }}">
+                    <p>{{ product.price }} $ </p>
+                    <p>{{ product.weight }} g </p>
+                    <p> More details</p>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+
+</body>
+
+{% include 'footer.html' %}

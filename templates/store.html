@@ -1,0 +1,49 @@
+{% include 'header.html' %}
+
+  <body>
+    <div class="container-fluid">
+
+        {% include 'navbar.html' %}
+
+    <div class="header">
+        <h1 class="name">ChocoShop</h1>
+        <h2>Welcome to Your Sweet Tooth's Heaven</h2>
+        <h4>Not Vegan, Sorry</h4>
+        <h4>Only Real Chocolate.</h4>
+    </div>
+
+    <div class="catalog grid-container">
+      <div class="category grid-item">
+        <a href="{{ url_for('category_products', category='chocolate') }}">
+        <img src="{{ url_for('static', filename='images/chocolate-cover.jpg')}} " alt="">
+        <h3> Chocolate </h3>
+      </a>
+      </div>
+
+      <div class="category grid-item">
+        <a href="{{ url_for('category_products', category='strawberries') }}">
+        <img src="{{ url_for('static', filename='images/strawberries-cover.jpg')}} " alt="">
+        <h3> Chocolate Strawberries</h3>
+        </a>
+      </div>
+
+      <div class="category grid-item">
+        <a href="{{ url_for('category_products', category='statues') }}">
+        <img src="{{ url_for('static', filename='images/statues-cover.jpg')}} " alt="">
+        <h3> Chocolate Statues</h3>
+        </a>
+      </div>
+
+      <div class="category grid-item">
+        <a href="{{ url_for('category_products', category='candies') }}">
+        <img src="{{ url_for('static', filename='images/candies-cover.jpg')}} " alt="">
+        <h3> Chocolate Candies </h3>
+        </a>
+      </div>
+
+    </div>
+    </div>
+
+    {% include 'footer.html' %}
+
+</body>
